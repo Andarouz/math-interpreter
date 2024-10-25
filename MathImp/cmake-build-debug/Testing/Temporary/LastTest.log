@@ -1,0 +1,65 @@
+Start testing: Oct 25 18:00 MSK
+----------------------------------------------------------
+1/1 Testing: VectorTests
+1/1 Test: VectorTests
+Command: "/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/VectorTests"
+Directory: /home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug
+"VectorTests" start time: Oct 25 18:00 MSK
+Output:
+----------------------------------------------------------
+Running main() from /home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-src/googletest/src/gtest_main.cc
+[==========] Running 19 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 19 tests from VectorTest
+[ RUN      ] VectorTest.Constructor
+[       OK ] VectorTest.Constructor (0 ms)
+[ RUN      ] VectorTest.CopyConstructor
+[       OK ] VectorTest.CopyConstructor (0 ms)
+[ RUN      ] VectorTest.MoveConstructor
+[       OK ] VectorTest.MoveConstructor (0 ms)
+[ RUN      ] VectorTest.AssignmentOperator
+[       OK ] VectorTest.AssignmentOperator (0 ms)
+[ RUN      ] VectorTest.MoveAssignmentOperator
+[       OK ] VectorTest.MoveAssignmentOperator (0 ms)
+[ RUN      ] VectorTest.EqualityOperator
+[       OK ] VectorTest.EqualityOperator (0 ms)
+[ RUN      ] VectorTest.InequalityOperator
+[       OK ] VectorTest.InequalityOperator (0 ms)
+[ RUN      ] VectorTest.AdditionOperator
+[       OK ] VectorTest.AdditionOperator (0 ms)
+[ RUN      ] VectorTest.SubtractionOperator
+[       OK ] VectorTest.SubtractionOperator (0 ms)
+[ RUN      ] VectorTest.MultiplicationOperator
+[       OK ] VectorTest.MultiplicationOperator (0 ms)
+[ RUN      ] VectorTest.DivisionOperator
+[       OK ] VectorTest.DivisionOperator (0 ms)
+[ RUN      ] VectorTest.IndexOperator
+[       OK ] VectorTest.IndexOperator (0 ms)
+[ RUN      ] VectorTest.Append
+[       OK ] VectorTest.Append (0 ms)
+[ RUN      ] VectorTest.PopBack
+[       OK ] VectorTest.PopBack (0 ms)
+[ RUN      ] VectorTest.Clear
+[       OK ] VectorTest.Clear (0 ms)
+[ RUN      ] VectorTest.Erase
+[       OK ] VectorTest.Erase (0 ms)
+[ RUN      ] VectorTest.Insert
+[       OK ] VectorTest.Insert (0 ms)
+[ RUN      ] VectorTest.Resize
+[       OK ] VectorTest.Resize (0 ms)
+[ RUN      ] VectorTest.Swap
+[       OK ] VectorTest.Swap (0 ms)
+[----------] 19 tests from VectorTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 19 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 19 tests.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"VectorTests" end time: Oct 25 18:00 MSK
+"VectorTests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 25 18:00 MSK

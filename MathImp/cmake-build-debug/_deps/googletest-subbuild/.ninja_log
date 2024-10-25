@@ -1,0 +1,21 @@
+# ninja log v6
+1209	1211	1729862079244037793	/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	a0aba86bca918015
+1211	1213	1729862079246037872	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	278664cc711f45de
+1217	1220	1729862079253038149	/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	8f4dfd7495525b8c
+3	1205	1729862079238037556	/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	eb4d87d07c83323e
+1205	1208	1729862079240037635	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	8d1f1b5ad36358e0
+1205	1208	1729862079240037635	/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	8d1f1b5ad36358e0
+1217	1220	1729862079253038149	CMakeFiles/googletest-populate-complete	8f4dfd7495525b8c
+1208	1209	1729862079242037714	/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	55e5c6101b09d4ba
+1209	1211	1729862079244037793	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	a0aba86bca918015
+3	1205	1729862079238037556	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	eb4d87d07c83323e
+1217	1220	1729862079253038149	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	8f4dfd7495525b8c
+1	3	1729862078035989993	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	497883f4ba5e0629
+1208	1209	1729862079242037714	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	55e5c6101b09d4ba
+1217	1220	1729862079253038149	/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-subbuild/CMakeFiles/googletest-populate-complete	8f4dfd7495525b8c
+1	3	1729862078035989993	/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	497883f4ba5e0629
+1213	1215	1729862079248037952	/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	4e19831d91bdfbfe
+1215	1217	1729862079250038031	/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	f0bbec1176f2f000
+1215	1217	1729862079250038031	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	f0bbec1176f2f000
+1213	1215	1729862079248037952	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	4e19831d91bdfbfe
+1211	1213	1729862079246037872	/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	278664cc711f45de
