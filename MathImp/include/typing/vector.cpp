@@ -17,6 +17,11 @@ API_MI_NAMESPACE API_MI_ Vector::Vector(std::vector<Number> value)
 
 }
 
+API_MI_NAMESPACE API_MI_ Vector::Vector(const int value)
+: value_(std::vector<Number>(value)) {
+
+}
+
 API_MI_NAMESPACE API_MI_ Vector::Vector(const Vector& other)
 : value_(other.value_) {
 
@@ -155,6 +160,17 @@ API_MI_BEGIN
         return *this;
     }
 
+    API_MI_ Vector& Vector::operator*=(const Vector& other) {
+        *this = *this * other;
+        return *this;
+    }
+
+    API_MI_ Vector& Vector::operator/=(const Vector& other) {
+        *this = *this / other;
+        return *this;
+    }
+
+
     API_MI_ Vector& Vector::operator++() {
         for (auto& number : value_) {
             ++number;
@@ -209,7 +225,7 @@ API_MI_BEGIN
         value_.resize(size);
     }
 
-    API_MI_ void Vector::swap(Vector& other) {
+    API_MI_ void Vector::swap(Vector& other) noexcept {
         value_.swap(other.value_);
     }
 

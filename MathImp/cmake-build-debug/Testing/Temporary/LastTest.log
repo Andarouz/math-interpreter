@@ -1,65 +1,94 @@
-Start testing: Oct 25 18:00 MSK
+Start testing: Oct 25 19:22 MSK
 ----------------------------------------------------------
-1/1 Testing: VectorTests
-1/1 Test: VectorTests
-Command: "/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/VectorTests"
+3/3 Testing: RationalTests
+3/3 Test: RationalTests
+Command: "/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/RationalTests"
 Directory: /home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug
-"VectorTests" start time: Oct 25 18:00 MSK
+"RationalTests" start time: Oct 25 19:22 MSK
 Output:
 ----------------------------------------------------------
 Running main() from /home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-src/googletest/src/gtest_main.cc
-[==========] Running 19 tests from 1 test suite.
+[==========] Running 20 tests from 1 test suite.
 [----------] Global test environment set-up.
-[----------] 19 tests from VectorTest
-[ RUN      ] VectorTest.Constructor
-[       OK ] VectorTest.Constructor (0 ms)
-[ RUN      ] VectorTest.CopyConstructor
-[       OK ] VectorTest.CopyConstructor (0 ms)
-[ RUN      ] VectorTest.MoveConstructor
-[       OK ] VectorTest.MoveConstructor (0 ms)
-[ RUN      ] VectorTest.AssignmentOperator
-[       OK ] VectorTest.AssignmentOperator (0 ms)
-[ RUN      ] VectorTest.MoveAssignmentOperator
-[       OK ] VectorTest.MoveAssignmentOperator (0 ms)
-[ RUN      ] VectorTest.EqualityOperator
-[       OK ] VectorTest.EqualityOperator (0 ms)
-[ RUN      ] VectorTest.InequalityOperator
-[       OK ] VectorTest.InequalityOperator (0 ms)
-[ RUN      ] VectorTest.AdditionOperator
-[       OK ] VectorTest.AdditionOperator (0 ms)
-[ RUN      ] VectorTest.SubtractionOperator
-[       OK ] VectorTest.SubtractionOperator (0 ms)
-[ RUN      ] VectorTest.MultiplicationOperator
-[       OK ] VectorTest.MultiplicationOperator (0 ms)
-[ RUN      ] VectorTest.DivisionOperator
-[       OK ] VectorTest.DivisionOperator (0 ms)
-[ RUN      ] VectorTest.IndexOperator
-[       OK ] VectorTest.IndexOperator (0 ms)
-[ RUN      ] VectorTest.Append
-[       OK ] VectorTest.Append (0 ms)
-[ RUN      ] VectorTest.PopBack
-[       OK ] VectorTest.PopBack (0 ms)
-[ RUN      ] VectorTest.Clear
-[       OK ] VectorTest.Clear (0 ms)
-[ RUN      ] VectorTest.Erase
-[       OK ] VectorTest.Erase (0 ms)
-[ RUN      ] VectorTest.Insert
-[       OK ] VectorTest.Insert (0 ms)
-[ RUN      ] VectorTest.Resize
-[       OK ] VectorTest.Resize (0 ms)
-[ RUN      ] VectorTest.Swap
-[       OK ] VectorTest.Swap (0 ms)
-[----------] 19 tests from VectorTest (0 ms total)
+[----------] 20 tests from RationalTest
+[ RUN      ] RationalTest.DefaultConstructor
+[       OK ] RationalTest.DefaultConstructor (0 ms)
+[ RUN      ] RationalTest.ParameterizedConstructor
+[       OK ] RationalTest.ParameterizedConstructor (0 ms)
+[ RUN      ] RationalTest.ZeroDenominatorThrows
+[       OK ] RationalTest.ZeroDenominatorThrows (0 ms)
+[ RUN      ] RationalTest.CopyConstructor
+[       OK ] RationalTest.CopyConstructor (0 ms)
+[ RUN      ] RationalTest.MoveConstructor
+[       OK ] RationalTest.MoveConstructor (0 ms)
+[ RUN      ] RationalTest.AssignmentOperator
+[       OK ] RationalTest.AssignmentOperator (0 ms)
+[ RUN      ] RationalTest.MoveAssignmentOperator
+[       OK ] RationalTest.MoveAssignmentOperator (0 ms)
+[ RUN      ] RationalTest.EqualityOperator
+[       OK ] RationalTest.EqualityOperator (0 ms)
+[ RUN      ] RationalTest.InequalityOperator
+[       OK ] RationalTest.InequalityOperator (0 ms)
+[ RUN      ] RationalTest.AdditionOperator
+[       OK ] RationalTest.AdditionOperator (0 ms)
+[ RUN      ] RationalTest.SubtractionOperator
+[       OK ] RationalTest.SubtractionOperator (0 ms)
+[ RUN      ] RationalTest.MultiplicationOperator
+[       OK ] RationalTest.MultiplicationOperator (0 ms)
+[ RUN      ] RationalTest.DivisionOperator
+[       OK ] RationalTest.DivisionOperator (0 ms)
+[ RUN      ] RationalTest.DivisionByZeroThrows
+[       OK ] RationalTest.DivisionByZeroThrows (0 ms)
+[ RUN      ] RationalTest.IncrementOperators
+[       OK ] RationalTest.IncrementOperators (0 ms)
+[ RUN      ] RationalTest.DecrementOperators
+[       OK ] RationalTest.DecrementOperators (0 ms)
+[ RUN      ] RationalTest.HexRepresentation
+/home/massonskyi/repo/math-interpretator-main/MathImp/tests/rational_test.cpp:126: Failure
+Expected equality of these values:
+  r.hex()
+    Which is: "2/3"
+  "a/f"
+[  FAILED  ] RationalTest.HexRepresentation (0 ms)
+[ RUN      ] RationalTest.DecRepresentation
+/home/massonskyi/repo/math-interpretator-main/MathImp/tests/rational_test.cpp:131: Failure
+Expected equality of these values:
+  r.dec()
+    Which is: "2/3"
+  "10/15"
+[  FAILED  ] RationalTest.DecRepresentation (0 ms)
+[ RUN      ] RationalTest.OctRepresentation
+/home/massonskyi/repo/math-interpretator-main/MathImp/tests/rational_test.cpp:136: Failure
+Expected equality of these values:
+  r.oct()
+    Which is: "2/3"
+  "12/17"
+[  FAILED  ] RationalTest.OctRepresentation (0 ms)
+[ RUN      ] RationalTest.BinRepresentation
+/home/massonskyi/repo/math-interpretator-main/MathImp/tests/rational_test.cpp:141: Failure
+Expected equality of these values:
+  r.bin()
+    Which is: "00000000000000000000000000000010/00000000000000000000000000000011"
+  "00000000000000000000000000001010/00000000000000000000000000001111"
+[  FAILED  ] RationalTest.BinRepresentation (0 ms)
+[----------] 20 tests from RationalTest (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 19 tests from 1 test suite ran. (0 ms total)
-[  PASSED  ] 19 tests.
+[==========] 20 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 16 tests.
+[  FAILED  ] 4 tests, listed below:
+[  FAILED  ] RationalTest.HexRepresentation
+[  FAILED  ] RationalTest.DecRepresentation
+[  FAILED  ] RationalTest.OctRepresentation
+[  FAILED  ] RationalTest.BinRepresentation
+
+ 4 FAILED TESTS
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
-Test Passed.
-"VectorTests" end time: Oct 25 18:00 MSK
-"VectorTests" time elapsed: 00:00:00
+Test Failed.
+"RationalTests" end time: Oct 25 19:22 MSK
+"RationalTests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Oct 25 18:00 MSK
+End testing: Oct 25 19:22 MSK

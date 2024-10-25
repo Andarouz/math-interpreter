@@ -70,12 +70,40 @@ build CMakeFiles/mathlib.dir/tests/vector_test.cpp.o: CXX_COMPILER__mathlib_unsc
   OBJECT_DIR = CMakeFiles/mathlib.dir
   OBJECT_FILE_DIR = CMakeFiles/mathlib.dir/tests
 
-build CMakeFiles/mathlib.dir/include/typing/Variable.cpp.o: CXX_COMPILER__mathlib_unscanned_Debug /home/massonskyi/repo/math-interpretator-main/MathImp/include/typing/Variable.cpp || cmake_object_order_depends_target_mathlib
-  DEP_FILE = CMakeFiles/mathlib.dir/include/typing/Variable.cpp.o.d
+build CMakeFiles/mathlib.dir/include/typing/variable.cpp.o: CXX_COMPILER__mathlib_unscanned_Debug /home/massonskyi/repo/math-interpretator-main/MathImp/include/typing/variable.cpp || cmake_object_order_depends_target_mathlib
+  DEP_FILE = CMakeFiles/mathlib.dir/include/typing/variable.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   INCLUDES = -I/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-src/googletest/include -I/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-build/googletest
   OBJECT_DIR = CMakeFiles/mathlib.dir
   OBJECT_FILE_DIR = CMakeFiles/mathlib.dir/include/typing
+
+build CMakeFiles/mathlib.dir/include/typing/matrix.cpp.o: CXX_COMPILER__mathlib_unscanned_Debug /home/massonskyi/repo/math-interpretator-main/MathImp/include/typing/matrix.cpp || cmake_object_order_depends_target_mathlib
+  DEP_FILE = CMakeFiles/mathlib.dir/include/typing/matrix.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-src/googletest/include -I/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-build/googletest
+  OBJECT_DIR = CMakeFiles/mathlib.dir
+  OBJECT_FILE_DIR = CMakeFiles/mathlib.dir/include/typing
+
+build CMakeFiles/mathlib.dir/tests/matrix_test.cpp.o: CXX_COMPILER__mathlib_unscanned_Debug /home/massonskyi/repo/math-interpretator-main/MathImp/tests/matrix_test.cpp || cmake_object_order_depends_target_mathlib
+  DEP_FILE = CMakeFiles/mathlib.dir/tests/matrix_test.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-src/googletest/include -I/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-build/googletest
+  OBJECT_DIR = CMakeFiles/mathlib.dir
+  OBJECT_FILE_DIR = CMakeFiles/mathlib.dir/tests
+
+build CMakeFiles/mathlib.dir/include/typing/rational.cpp.o: CXX_COMPILER__mathlib_unscanned_Debug /home/massonskyi/repo/math-interpretator-main/MathImp/include/typing/rational.cpp || cmake_object_order_depends_target_mathlib
+  DEP_FILE = CMakeFiles/mathlib.dir/include/typing/rational.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-src/googletest/include -I/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-build/googletest
+  OBJECT_DIR = CMakeFiles/mathlib.dir
+  OBJECT_FILE_DIR = CMakeFiles/mathlib.dir/include/typing
+
+build CMakeFiles/mathlib.dir/tests/rational_test.cpp.o: CXX_COMPILER__mathlib_unscanned_Debug /home/massonskyi/repo/math-interpretator-main/MathImp/tests/rational_test.cpp || cmake_object_order_depends_target_mathlib
+  DEP_FILE = CMakeFiles/mathlib.dir/tests/rational_test.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-src/googletest/include -I/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-build/googletest
+  OBJECT_DIR = CMakeFiles/mathlib.dir
+  OBJECT_FILE_DIR = CMakeFiles/mathlib.dir/tests
 
 
 # =============================================================================
@@ -85,7 +113,7 @@ build CMakeFiles/mathlib.dir/include/typing/Variable.cpp.o: CXX_COMPILER__mathli
 #############################################
 # Link the static library libmathlib.a
 
-build libmathlib.a: CXX_STATIC_LIBRARY_LINKER__mathlib_Debug CMakeFiles/mathlib.dir/include/typing/number.cpp.o CMakeFiles/mathlib.dir/include/typing/vector.cpp.o CMakeFiles/mathlib.dir/tests/vector_test.cpp.o CMakeFiles/mathlib.dir/include/typing/Variable.cpp.o
+build libmathlib.a: CXX_STATIC_LIBRARY_LINKER__mathlib_Debug CMakeFiles/mathlib.dir/include/typing/number.cpp.o CMakeFiles/mathlib.dir/include/typing/vector.cpp.o CMakeFiles/mathlib.dir/tests/vector_test.cpp.o CMakeFiles/mathlib.dir/include/typing/variable.cpp.o CMakeFiles/mathlib.dir/include/typing/matrix.cpp.o CMakeFiles/mathlib.dir/tests/matrix_test.cpp.o CMakeFiles/mathlib.dir/include/typing/rational.cpp.o CMakeFiles/mathlib.dir/tests/rational_test.cpp.o
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = CMakeFiles/mathlib.dir
   POST_BUILD = :
@@ -172,6 +200,107 @@ build VectorTests: CXX_EXECUTABLE_LINKER__VectorTests_Debug CMakeFiles/VectorTes
   PRE_LINK = :
   TARGET_FILE = VectorTests
   TARGET_PDB = VectorTests.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target MatrixTests
+
+
+#############################################
+# Order-only phony target for MatrixTests
+
+build cmake_object_order_depends_target_MatrixTests: phony || cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main cmake_object_order_depends_target_mathlib
+
+build CMakeFiles/MatrixTests.dir/tests/matrix_test.cpp.o: CXX_COMPILER__MatrixTests_unscanned_Debug /home/massonskyi/repo/math-interpretator-main/MathImp/tests/matrix_test.cpp || cmake_object_order_depends_target_MatrixTests
+  DEP_FILE = CMakeFiles/MatrixTests.dir/tests/matrix_test.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-build/googletest -isystem /home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-src/googletest
+  OBJECT_DIR = CMakeFiles/MatrixTests.dir
+  OBJECT_FILE_DIR = CMakeFiles/MatrixTests.dir/tests
+
+build CMakeFiles/MatrixTests.dir/include/typing/number.cpp.o: CXX_COMPILER__MatrixTests_unscanned_Debug /home/massonskyi/repo/math-interpretator-main/MathImp/include/typing/number.cpp || cmake_object_order_depends_target_MatrixTests
+  DEP_FILE = CMakeFiles/MatrixTests.dir/include/typing/number.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-build/googletest -isystem /home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-src/googletest
+  OBJECT_DIR = CMakeFiles/MatrixTests.dir
+  OBJECT_FILE_DIR = CMakeFiles/MatrixTests.dir/include/typing
+
+build CMakeFiles/MatrixTests.dir/include/typing/vector.cpp.o: CXX_COMPILER__MatrixTests_unscanned_Debug /home/massonskyi/repo/math-interpretator-main/MathImp/include/typing/vector.cpp || cmake_object_order_depends_target_MatrixTests
+  DEP_FILE = CMakeFiles/MatrixTests.dir/include/typing/vector.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-build/googletest -isystem /home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-src/googletest
+  OBJECT_DIR = CMakeFiles/MatrixTests.dir
+  OBJECT_FILE_DIR = CMakeFiles/MatrixTests.dir/include/typing
+
+build CMakeFiles/MatrixTests.dir/include/typing/matrix.cpp.o: CXX_COMPILER__MatrixTests_unscanned_Debug /home/massonskyi/repo/math-interpretator-main/MathImp/include/typing/matrix.cpp || cmake_object_order_depends_target_MatrixTests
+  DEP_FILE = CMakeFiles/MatrixTests.dir/include/typing/matrix.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-build/googletest -isystem /home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-src/googletest
+  OBJECT_DIR = CMakeFiles/MatrixTests.dir
+  OBJECT_FILE_DIR = CMakeFiles/MatrixTests.dir/include/typing
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target MatrixTests
+
+
+#############################################
+# Link the executable MatrixTests
+
+build MatrixTests: CXX_EXECUTABLE_LINKER__MatrixTests_Debug CMakeFiles/MatrixTests.dir/tests/matrix_test.cpp.o CMakeFiles/MatrixTests.dir/include/typing/number.cpp.o CMakeFiles/MatrixTests.dir/include/typing/vector.cpp.o CMakeFiles/MatrixTests.dir/include/typing/matrix.cpp.o | lib/libgtest.a lib/libgtest_main.a libmathlib.a lib/libgtest.a || lib/libgtest.a lib/libgtest_main.a libmathlib.a
+  FLAGS = -g
+  LINK_LIBRARIES = lib/libgtest.a  lib/libgtest_main.a  libmathlib.a  lib/libgtest.a
+  OBJECT_DIR = CMakeFiles/MatrixTests.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = MatrixTests
+  TARGET_PDB = MatrixTests.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target RationalTests
+
+
+#############################################
+# Order-only phony target for RationalTests
+
+build cmake_object_order_depends_target_RationalTests: phony || cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main cmake_object_order_depends_target_mathlib
+
+build CMakeFiles/RationalTests.dir/tests/rational_test.cpp.o: CXX_COMPILER__RationalTests_unscanned_Debug /home/massonskyi/repo/math-interpretator-main/MathImp/tests/rational_test.cpp || cmake_object_order_depends_target_RationalTests
+  DEP_FILE = CMakeFiles/RationalTests.dir/tests/rational_test.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-build/googletest -isystem /home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-src/googletest
+  OBJECT_DIR = CMakeFiles/RationalTests.dir
+  OBJECT_FILE_DIR = CMakeFiles/RationalTests.dir/tests
+
+build CMakeFiles/RationalTests.dir/include/typing/number.cpp.o: CXX_COMPILER__RationalTests_unscanned_Debug /home/massonskyi/repo/math-interpretator-main/MathImp/include/typing/number.cpp || cmake_object_order_depends_target_RationalTests
+  DEP_FILE = CMakeFiles/RationalTests.dir/include/typing/number.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-build/googletest -isystem /home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-src/googletest
+  OBJECT_DIR = CMakeFiles/RationalTests.dir
+  OBJECT_FILE_DIR = CMakeFiles/RationalTests.dir/include/typing
+
+build CMakeFiles/RationalTests.dir/include/typing/rational.cpp.o: CXX_COMPILER__RationalTests_unscanned_Debug /home/massonskyi/repo/math-interpretator-main/MathImp/include/typing/rational.cpp || cmake_object_order_depends_target_RationalTests
+  DEP_FILE = CMakeFiles/RationalTests.dir/include/typing/rational.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-build/googletest -isystem /home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-src/googletest
+  OBJECT_DIR = CMakeFiles/RationalTests.dir
+  OBJECT_FILE_DIR = CMakeFiles/RationalTests.dir/include/typing
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target RationalTests
+
+
+#############################################
+# Link the executable RationalTests
+
+build RationalTests: CXX_EXECUTABLE_LINKER__RationalTests_Debug CMakeFiles/RationalTests.dir/tests/rational_test.cpp.o CMakeFiles/RationalTests.dir/include/typing/number.cpp.o CMakeFiles/RationalTests.dir/include/typing/rational.cpp.o | lib/libgtest.a lib/libgtest_main.a libmathlib.a lib/libgtest.a || lib/libgtest.a lib/libgtest_main.a libmathlib.a
+  FLAGS = -g
+  LINK_LIBRARIES = lib/libgtest.a  lib/libgtest_main.a  libmathlib.a  lib/libgtest.a
+  OBJECT_DIR = CMakeFiles/RationalTests.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = RationalTests
+  TARGET_PDB = RationalTests.dbg
 
 
 #############################################
@@ -653,7 +782,7 @@ build mathlib: phony libmathlib.a
 #############################################
 # Folder: /home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug
 
-build all: phony libmathlib.a MathImp VectorTests _deps/googletest-build/all
+build all: phony libmathlib.a MathImp VectorTests MatrixTests RationalTests _deps/googletest-build/all
 
 # =============================================================================
 

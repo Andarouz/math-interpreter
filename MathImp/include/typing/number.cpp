@@ -206,6 +206,17 @@ API_MI_ Number& Number::operator-=(const Number& other) {
     return *this;
 }
 
+
+API_MI_ Number& Number::operator*=(const Number& other) {
+    *this = *this * other;
+    return *this;
+}
+
+API_MI_ Number& Number::operator/=(const Number& other) {
+    *this = *this / other;
+    return *this;
+}
+
 API_MI_ Number& Number::operator++() {
     switch (value_.type()) {
         case Variable::Type::INT:

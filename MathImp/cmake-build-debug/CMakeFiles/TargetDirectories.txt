@@ -1,6 +1,8 @@
 /home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/CMakeFiles/mathlib.dir
 /home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/CMakeFiles/MathImp.dir
 /home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/CMakeFiles/VectorTests.dir
+/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/CMakeFiles/MatrixTests.dir
+/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/CMakeFiles/RationalTests.dir
 /home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/CMakeFiles/test.dir
 /home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/CMakeFiles/edit_cache.dir
 /home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/CMakeFiles/rebuild_cache.dir

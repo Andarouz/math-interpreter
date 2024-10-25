@@ -15,6 +15,7 @@ class Vector final : public AbstractObject {
 public API_METHODS:
     Vector();
     explicit Vector(std::vector<Number> value);
+    explicit Vector(const int value);
     Vector(const Vector& other);
     Vector(Vector&& other) noexcept;
     ~Vector() override = default;
@@ -43,6 +44,9 @@ public API_METHODS:
 
     API_MI_ Vector& operator+=(const Vector& other);
     API_MI_ Vector& operator-=(const Vector& other);
+    API_MI_ Vector& operator*=(const Vector& other);
+    API_MI_ Vector& operator/=(const Vector& other);
+
     API_MI_ Vector& operator++();    // Prefix increment
     API_MI_ Vector operator++(int);  // Postfix increment
     API_MI_ Vector& operator--();    // Prefix decrement
@@ -61,7 +65,7 @@ public API_METHODS:
     API_MI_ void erase(int index);
     API_MI_ void insert(int index, const Number& number);
     API_MI_ void resize(int size);
-    API_MI_ void swap(Vector& other);
+    API_MI_ void swap(Vector& other) noexcept;
 
     API_MI_ std::vector<Number>::iterator begin();
     API_MI_ std::vector<Number>::iterator end();

@@ -5,7 +5,7 @@
 #ifndef NUMBER_HPP
 #define NUMBER_HPP
 
-#include "Variable.h"
+#include "variable.h"
 API_MI_BEGIN
 
 class Number final : public AbstractObject {
@@ -47,6 +47,9 @@ public API_METHODS:
 
     API_MI_ Number& operator+=(const Number& other);
     API_MI_ Number& operator-=(const Number& other);
+    API_MI_ Number& operator*=(const Number& other);
+    API_MI_ Number& operator/=(const Number& other);
+
     API_MI_ Number& operator++();    // Prefix increment
     API_MI_ Number operator++(int);  // Postfix increment
     API_MI_ Number& operator--();    // Prefix decrement
