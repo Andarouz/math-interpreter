@@ -189,6 +189,12 @@ API_MI_BEGIN
         return *this;
     }
 
+    API_MI_ Variable& Variable::operator=(const std::string& value) {
+        value_ = value;
+        type_ = Type::STRING;
+        return *this;
+    }
+
 
     API_MI_ bool Variable::operator==(const Variable& other) const {
         if (type_ != other.type_) {

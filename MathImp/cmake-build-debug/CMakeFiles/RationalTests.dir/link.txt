@@ -1,0 +1,3 @@
+C:\Users\gavri\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E rm -f CMakeFiles\RationalTests.dir/objects.a
+C:\Users\gavri\AppData\Local\Programs\CLion\bin\mingw\bin\ar.exe qc CMakeFiles\RationalTests.dir/objects.a @CMakeFiles\RationalTests.dir\objects1.rsp
+C:\Users\gavri\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\RationalTests.dir/objects.a -Wl,--no-whole-archive -o RationalTests.exe -Wl,--out-implib,libRationalTests.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\RationalTests.dir\linkLibs.rsp

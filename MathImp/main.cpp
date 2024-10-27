@@ -2,12 +2,17 @@
 #include <string>
 #include <vector>
 #include <map>
-#include <optional>
-#include <unistd.h>
-#include <termios.h>
 #include <fcntl.h>
 #include <sstream>
 #include <regex>
+
+#ifdef _WIN32
+    #include <windows.h>  // Windows-specific library
+#else
+    #include <termios.h>  // Linux and POSIX systems
+#endif
+
+
 #include "include/typing/number.h"
 #include "include/typing/vector.h"
 

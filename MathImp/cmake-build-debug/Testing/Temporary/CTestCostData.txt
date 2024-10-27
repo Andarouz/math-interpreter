@@ -1,5 +1,6 @@
-VectorTests 4 0.000341821
-MatrixTests 3 0.000447446
+VectorTests 1 0.465793
+MatrixTests 1 0.0468537
 RationalTests 0 0
+StringTests 0 0
 ---
-RationalTests
+StringTests

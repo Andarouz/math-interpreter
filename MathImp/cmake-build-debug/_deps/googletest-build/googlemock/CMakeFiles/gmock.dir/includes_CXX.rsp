@@ -1,0 +1,1 @@
+-I"C:/repo/math-interpreter/MathImp/cmake-build-debug/_deps/googletest-src/googlemock/include" -I"C:/repo/math-interpreter/MathImp/cmake-build-debug/_deps/googletest-src/googlemock" -isystem "C:/repo/math-interpreter/MathImp/cmake-build-debug/_deps/googletest-src/googletest/include" -isystem "C:/repo/math-interpreter/MathImp/cmake-build-debug/_deps/googletest-src/googletest"

@@ -1,94 +1,74 @@
-Start testing: Oct 25 19:22 MSK
+Start testing: Oct 27 17:08 RTZ 2 (çèìà)
 ----------------------------------------------------------
-3/3 Testing: RationalTests
-3/3 Test: RationalTests
-Command: "/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/RationalTests"
-Directory: /home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug
-"RationalTests" start time: Oct 25 19:22 MSK
+4/4 Testing: StringTests
+4/4 Test: StringTests
+Command: "C:/repo/math-interpreter/MathImp/cmake-build-debug/StringTests.exe"
+Directory: C:/repo/math-interpreter/MathImp/cmake-build-debug
+"StringTests" start time: Oct 27 17:08 RTZ 2 (çèìà)
 Output:
 ----------------------------------------------------------
-Running main() from /home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-src/googletest/src/gtest_main.cc
-[==========] Running 20 tests from 1 test suite.
+Running main() from C:\repo\math-interpreter\MathImp\cmake-build-debug\_deps\googletest-src\googletest\src\gtest_main.cc
+[==========] Running 19 tests from 1 test suite.
 [----------] Global test environment set-up.
-[----------] 20 tests from RationalTest
-[ RUN      ] RationalTest.DefaultConstructor
-[       OK ] RationalTest.DefaultConstructor (0 ms)
-[ RUN      ] RationalTest.ParameterizedConstructor
-[       OK ] RationalTest.ParameterizedConstructor (0 ms)
-[ RUN      ] RationalTest.ZeroDenominatorThrows
-[       OK ] RationalTest.ZeroDenominatorThrows (0 ms)
-[ RUN      ] RationalTest.CopyConstructor
-[       OK ] RationalTest.CopyConstructor (0 ms)
-[ RUN      ] RationalTest.MoveConstructor
-[       OK ] RationalTest.MoveConstructor (0 ms)
-[ RUN      ] RationalTest.AssignmentOperator
-[       OK ] RationalTest.AssignmentOperator (0 ms)
-[ RUN      ] RationalTest.MoveAssignmentOperator
-[       OK ] RationalTest.MoveAssignmentOperator (0 ms)
-[ RUN      ] RationalTest.EqualityOperator
-[       OK ] RationalTest.EqualityOperator (0 ms)
-[ RUN      ] RationalTest.InequalityOperator
-[       OK ] RationalTest.InequalityOperator (0 ms)
-[ RUN      ] RationalTest.AdditionOperator
-[       OK ] RationalTest.AdditionOperator (0 ms)
-[ RUN      ] RationalTest.SubtractionOperator
-[       OK ] RationalTest.SubtractionOperator (0 ms)
-[ RUN      ] RationalTest.MultiplicationOperator
-[       OK ] RationalTest.MultiplicationOperator (0 ms)
-[ RUN      ] RationalTest.DivisionOperator
-[       OK ] RationalTest.DivisionOperator (0 ms)
-[ RUN      ] RationalTest.DivisionByZeroThrows
-[       OK ] RationalTest.DivisionByZeroThrows (0 ms)
-[ RUN      ] RationalTest.IncrementOperators
-[       OK ] RationalTest.IncrementOperators (0 ms)
-[ RUN      ] RationalTest.DecrementOperators
-[       OK ] RationalTest.DecrementOperators (0 ms)
-[ RUN      ] RationalTest.HexRepresentation
-/home/massonskyi/repo/math-interpretator-main/MathImp/tests/rational_test.cpp:126: Failure
+[----------] 19 tests from StringTest
+[ RUN      ] StringTest.DefaultConstructor
+[       OK ] StringTest.DefaultConstructor (0 ms)
+[ RUN      ] StringTest.ConstructorWithStdString
+[       OK ] StringTest.ConstructorWithStdString (0 ms)
+[ RUN      ] StringTest.ConstructorWithCString
+[       OK ] StringTest.ConstructorWithCString (0 ms)
+[ RUN      ] StringTest.CopyConstructor
+[       OK ] StringTest.CopyConstructor (0 ms)
+[ RUN      ] StringTest.MoveConstructor
+[       OK ] StringTest.MoveConstructor (0 ms)
+[ RUN      ] StringTest.HexConversion
+[       OK ] StringTest.HexConversion (0 ms)
+[ RUN      ] StringTest.DecConversion
+[       OK ] StringTest.DecConversion (0 ms)
+[ RUN      ] StringTest.OctConversion
+C:\repo\math-interpreter\MathImp\tests\string_test.cpp:52: Failure
 Expected equality of these values:
-  r.hex()
-    Which is: "2/3"
-  "a/f"
-[  FAILED  ] RationalTest.HexRepresentation (0 ms)
-[ RUN      ] RationalTest.DecRepresentation
-/home/massonskyi/repo/math-interpretator-main/MathImp/tests/rational_test.cpp:131: Failure
-Expected equality of these values:
-  r.dec()
-    Which is: "2/3"
-  "10/15"
-[  FAILED  ] RationalTest.DecRepresentation (0 ms)
-[ RUN      ] RationalTest.OctRepresentation
-/home/massonskyi/repo/math-interpretator-main/MathImp/tests/rational_test.cpp:136: Failure
-Expected equality of these values:
-  r.oct()
-    Which is: "2/3"
-  "12/17"
-[  FAILED  ] RationalTest.OctRepresentation (0 ms)
-[ RUN      ] RationalTest.BinRepresentation
-/home/massonskyi/repo/math-interpretator-main/MathImp/tests/rational_test.cpp:141: Failure
-Expected equality of these values:
-  r.bin()
-    Which is: "00000000000000000000000000000010/00000000000000000000000000000011"
-  "00000000000000000000000000001010/00000000000000000000000000001111"
-[  FAILED  ] RationalTest.BinRepresentation (0 ms)
-[----------] 20 tests from RationalTest (0 ms total)
+  str.oct()
+    Which is: "110145154154157"
+  "0110100140150140157"
+[  FAILED  ] StringTest.OctConversion (0 ms)
+[ RUN      ] StringTest.BinConversion
+[       OK ] StringTest.BinConversion (0 ms)
+[ RUN      ] StringTest.EqualityOperator
+[       OK ] StringTest.EqualityOperator (0 ms)
+[ RUN      ] StringTest.AdditionOperator
+[       OK ] StringTest.AdditionOperator (0 ms)
+[ RUN      ] StringTest.Substring
+[       OK ] StringTest.Substring (0 ms)
+[ RUN      ] StringTest.Trim
+[       OK ] StringTest.Trim (0 ms)
+[ RUN      ] StringTest.ToUpperCase
+[       OK ] StringTest.ToUpperCase (0 ms)
+[ RUN      ] StringTest.ToLowerCase
+[       OK ] StringTest.ToLowerCase (0 ms)
+[ RUN      ] StringTest.Split
+[       OK ] StringTest.Split (0 ms)
+[ RUN      ] StringTest.Slice
+[       OK ] StringTest.Slice (0 ms)
+[ RUN      ] StringTest.Replace
+[       OK ] StringTest.Replace (0 ms)
+[ RUN      ] StringTest.IndexOf
+[       OK ] StringTest.IndexOf (0 ms)
+[----------] 19 tests from StringTest (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 20 tests from 1 test suite ran. (0 ms total)
-[  PASSED  ] 16 tests.
-[  FAILED  ] 4 tests, listed below:
-[  FAILED  ] RationalTest.HexRepresentation
-[  FAILED  ] RationalTest.DecRepresentation
-[  FAILED  ] RationalTest.OctRepresentation
-[  FAILED  ] RationalTest.BinRepresentation
+[==========] 19 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 18 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] StringTest.OctConversion
 
- 4 FAILED TESTS
+ 1 FAILED TEST
 <end of output>
-Test time =   0.00 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Failed.
-"RationalTests" end time: Oct 25 19:22 MSK
-"RationalTests" time elapsed: 00:00:00
+"StringTests" end time: Oct 27 17:08 RTZ 2 (çèìà)
+"StringTests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Oct 25 19:22 MSK
+End testing: Oct 27 17:08 RTZ 2 (çèìà)

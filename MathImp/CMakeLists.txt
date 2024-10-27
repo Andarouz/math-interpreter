@@ -20,10 +20,16 @@ add_library(mathlib STATIC
         include/typing/rational.cpp
         include/typing/rational.h
         tests/rational_test.cpp
+        include/interpreter.hpp
+        include/Lexer.hpp
+        include/typing/string.cpp
+        include/typing/string.h
+        tests/string_test.cpp
 )
 
 # Add the executable target
-add_executable(MathImp main.cpp)
+add_executable(MathImp main.cpp
+       )
 
 # Link the library to the executable
 target_link_libraries(MathImp PRIVATE mathlib)
@@ -83,3 +89,15 @@ target_link_libraries(RationalTests PRIVATE gtest gtest_main mathlib)
 
 # Add a test for Rational
 add_test(NAME RationalTests COMMAND RationalTests)
+
+add_executable(StringTests tests/string_test.cpp
+        include/typing/number.cpp
+        include/typing/number.h
+        include/typing/string.cpp
+        include/typing/string.h)
+
+# Link Google Test and the library to the String test executable
+target_link_libraries(StringTests PRIVATE gtest gtest_main mathlib)
+
+# Add a test for String
+add_test(NAME StringTests COMMAND StringTests)

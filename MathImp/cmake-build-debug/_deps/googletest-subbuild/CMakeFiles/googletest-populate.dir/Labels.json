@@ -2,37 +2,37 @@
 	"sources" : 
 	[
 		{
-			"file" : "/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-subbuild/CMakeFiles/googletest-populate"
+			"file" : "C:/repo/math-interpreter/MathImp/cmake-build-debug/_deps/googletest-subbuild/CMakeFiles/googletest-populate"
 		},
 		{
-			"file" : "/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-subbuild/CMakeFiles/googletest-populate.rule"
+			"file" : "C:/repo/math-interpreter/MathImp/cmake-build-debug/_deps/googletest-subbuild/CMakeFiles/googletest-populate.rule"
 		},
 		{
-			"file" : "/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-subbuild/CMakeFiles/googletest-populate-complete.rule"
+			"file" : "C:/repo/math-interpreter/MathImp/cmake-build-debug/_deps/googletest-subbuild/CMakeFiles/googletest-populate-complete.rule"
 		},
 		{
-			"file" : "/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build.rule"
+			"file" : "C:/repo/math-interpreter/MathImp/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build.rule"
 		},
 		{
-			"file" : "/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure.rule"
+			"file" : "C:/repo/math-interpreter/MathImp/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure.rule"
 		},
 		{
-			"file" : "/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download.rule"
+			"file" : "C:/repo/math-interpreter/MathImp/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download.rule"
 		},
 		{
-			"file" : "/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install.rule"
+			"file" : "C:/repo/math-interpreter/MathImp/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install.rule"
 		},
 		{
-			"file" : "/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir.rule"
+			"file" : "C:/repo/math-interpreter/MathImp/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir.rule"
 		},
 		{
-			"file" : "/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch.rule"
+			"file" : "C:/repo/math-interpreter/MathImp/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch.rule"
 		},
 		{
-			"file" : "/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test.rule"
+			"file" : "C:/repo/math-interpreter/MathImp/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test.rule"
 		},
 		{
-			"file" : "/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update.rule"
+			"file" : "C:/repo/math-interpreter/MathImp/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update.rule"
 		}
 	],
 	"target" : 

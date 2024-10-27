@@ -5,8 +5,8 @@ cmake_minimum_required(VERSION 3.5)
 
 # Make file names absolute:
 #
-get_filename_component(filename "/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/release-1.12.1.zip" ABSOLUTE)
-get_filename_component(directory "/home/massonskyi/repo/math-interpretator-main/MathImp/cmake-build-debug/_deps/googletest-src" ABSOLUTE)
+get_filename_component(filename "C:/repo/math-interpreter/MathImp/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/release-1.12.1.zip" ABSOLUTE)
+get_filename_component(directory "C:/repo/math-interpreter/MathImp/cmake-build-debug/_deps/googletest-src" ABSOLUTE)
 
 message(STATUS "extracting...
      src='${filename}'

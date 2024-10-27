@@ -41,7 +41,7 @@ public API_METHODS:
     API_MI_ Variable& operator=(Variable&& other) noexcept;
     API_MI_ Variable& operator=(int value);
     API_MI_ Variable& operator=(float value);
-
+    API_MI_ Variable& operator=(const std::string& value);
 
     API_MI_ bool operator==(const Variable& other) const;
     API_MI_ bool operator!=(const Variable& other) const;
