@@ -122,12 +122,12 @@ TEST(RationalTest, DecrementOperators) {
 }
 
 TEST(RationalTest, HexRepresentation) {
-    Rational r(10, 15);
+    const Rational r(10, 15);
     EXPECT_EQ(r.hex(), "a/f");
 }
 
 TEST(RationalTest, DecRepresentation) {
-    Rational r(10, 15);
+    const Rational r(10, 15);
     EXPECT_EQ(r.dec(), "10/15");
 }
 

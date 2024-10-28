@@ -2,7 +2,7 @@
 #ifndef RATIONAL_HPP
 #define RATIONAL_HPP
 
-#include "AbstractObject.hpp"
+#include "abstractObject.hpp"
 API_MI_BEGIN
 
 class Rational final : public AbstractObject {

@@ -6,7 +6,7 @@
 #define MATRIX_HPP
 
 
-#include "AbstractObject.hpp"
+#include "abstractObject.hpp"
 #include "vector.h"
 
 API_MI_BEGIN

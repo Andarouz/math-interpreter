@@ -1,5 +1,0 @@
-C:\Users\gavri\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "MinGW Makefiles" -S C:\repo\math-interpreter\MathImp -B C:\repo\math-interpreter\MathImp\cmake-build-debug
--- Could NOT find Python (missing: Python_EXECUTABLE Interpreter) 
--- Configuring done (5.8s)
--- Generating done (0.3s)
--- Build files have been written to: C:/repo/math-interpreter/MathImp/cmake-build-debug

@@ -7,7 +7,7 @@
 
 #include <vector>
 
-#include "AbstractObject.hpp"
+#include "abstractObject.hpp"
 API_MI_BEGIN
 
 class Number;

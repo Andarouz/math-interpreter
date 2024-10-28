@@ -18,4 +18,9 @@
 #define API_VIRTUAL_METHODS
 #define API_CONSTS
 
+API_MI_BEGIN
+
+API_MI_ constexpr char RESERVED_WORDS[] = "int float str vec mat rat";
+API_MI_ constexpr char RESERVED_OPERATORS[] = "+ - * / ^ = ; , [ ] /";
+API_MI_END
 #endif //CORE_HPP

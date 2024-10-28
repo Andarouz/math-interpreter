@@ -7,7 +7,7 @@
 
 #include <variant>
 
-#include "AbstractObject.hpp"
+#include "abstractObject.hpp"
 
 API_MI_BEGIN
 class Variable final : public AbstractObject{

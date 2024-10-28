@@ -8,7 +8,7 @@ add_library(mathlib STATIC
         include/typing/number.cpp
         include/typing/number.h
         include/core.hpp
-        include/typing/AbstractObject.hpp
+        include/typing/abstractObject.hpp
         include/typing/vector.cpp
         include/typing/vector.h
         tests/vector_test.cpp
@@ -20,16 +20,23 @@ add_library(mathlib STATIC
         include/typing/rational.cpp
         include/typing/rational.h
         tests/rational_test.cpp
-        include/interpreter.hpp
-        include/Lexer.hpp
+        include/base/interpreter.h
+        include/base/lexer.h
+        include/base/lexer.cpp
+        include/base/errorHandler.hpp
+        include/base/history.h
+        include/base/history.cpp
         include/typing/string.cpp
         include/typing/string.h
         tests/string_test.cpp
+        tests/lexer_test.cpp
+        tests/history_test.cpp
+        include/typing/tokenTypes.hpp
+        include/base/interpreter.cpp
 )
 
 # Add the executable target
-add_executable(MathImp main.cpp
-       )
+add_executable(MathImp main.cpp)
 
 # Link the library to the executable
 target_link_libraries(MathImp PRIVATE mathlib)
@@ -101,3 +108,26 @@ target_link_libraries(StringTests PRIVATE gtest gtest_main mathlib)
 
 # Add a test for String
 add_test(NAME StringTests COMMAND StringTests)
+
+
+add_executable(LexerTests tests/lexer_test.cpp
+        include/typing/number.cpp
+        include/typing/number.h
+        include/base/lexer.h)
+
+# Link Google Test and the library to the Lexer test executable
+target_link_libraries(LexerTests PRIVATE gtest gtest_main mathlib)
+
+# Add a test for Lexer
+add_test(NAME LexerTests COMMAND LexerTests)
+
+add_executable(HistoryTests tests/history_test.cpp
+        include/base/history.h
+        include/base/history.cpp
+)
+
+# Link Google Test and the library to the History test executable
+target_link_libraries(HistoryTests PRIVATE gtest gtest_main mathlib)
+
+# Add a test for History
+add_test(NAME HistoryTests COMMAND HistoryTests)
