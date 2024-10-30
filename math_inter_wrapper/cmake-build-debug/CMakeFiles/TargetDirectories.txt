@@ -1,0 +1,5 @@
+/home/massonskyi/repo/math-interpretator-main/math_inter_wrapper/cmake-build-debug/CMakeFiles/math_inter_wrapper.dir
+/home/massonskyi/repo/math-interpretator-main/math_inter_wrapper/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/massonskyi/repo/math-interpretator-main/math_inter_wrapper/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/massonskyi/repo/math-interpretator-main/math_inter_wrapper/cmake-build-debug/CMakeFiles/math_inter_wrapper_autogen_timestamp_deps.dir
+/home/massonskyi/repo/math-interpretator-main/math_inter_wrapper/cmake-build-debug/CMakeFiles/math_inter_wrapper_autogen.dir

@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="TerminalView.qml">src/views/TerminalView.qml</file>
+        <file alias="TerminalStyle.qml">src/views/TerminalStyle.qml</file>
+    </qresource>
+</RCC>

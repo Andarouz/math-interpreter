@@ -53,6 +53,7 @@
 #define __INT_LEAST8_WIDTH__ 8
 #define __cpp_variadic_using 201611L
 #define __UINT_LEAST64_MAX__ 0xffffffffffffffffUL
+#define QT_OPENGL_LIB 1
 #define __INT_LEAST8_MAX__ 0x7f
 #define __cpp_capture_star_this 201603L
 #define __SHRT_MAX__ 0x7fff
@@ -61,6 +62,7 @@
 #define __FLT64X_MAX_10_EXP__ 4932
 #define __cpp_if_constexpr 201606L
 #define __LDBL_IS_IEC_60559__ 2
+#define QT_QMLINTEGRATION_LIB 1
 #define __FLT64X_HAS_QUIET_NAN__ 1
 #define __UINT_LEAST8_MAX__ 0xff
 #define __GCC_ATOMIC_BOOL_LOCK_FREE 2
@@ -68,6 +70,7 @@
 #define __UINTMAX_TYPE__ long unsigned int
 #define __linux 1
 #define __DEC32_EPSILON__ 1E-6DF
+#define QT_QMLMODELS_LIB 1
 #define __FLT_EVAL_METHOD_TS_18661_3__ 0
 #define __unix 1
 #define __UINT32_MAX__ 0xffffffffU
@@ -214,6 +217,7 @@
 #define _STDC_PREDEF_H 1
 #define __INT_LEAST32_MAX__ 0x7fffffff
 #define __GCC_ATOMIC_INT_LOCK_FREE 2
+#define QT_QUICK_LIB 1
 #define __FLT128_MAX_EXP__ 16384
 #define __cpp_conditional_explicit 201806L
 #define __FLT32_MANT_DIG__ 24
@@ -283,6 +287,7 @@
 #define __INT_LEAST16_MAX__ 0x7fff
 #define __DEC64_MANT_DIG__ 16
 #define __INT64_MAX__ 0x7fffffffffffffffL
+#define QT_NETWORK_LIB 1
 #define __SEG_GS 1
 #define __FLT32_DENORM_MIN__ 1.40129846432481707092372958328991613e-45F32
 #define __SIG_ATOMIC_WIDTH__ 32
@@ -426,6 +431,7 @@
 #define __FLT32X_DIG__ 15
 #define __PTRDIFF_TYPE__ long int
 #define __ATOMIC_SEQ_CST 5
+#define QT_QML_LIB 1
 #define __FLT32X_MIN_10_EXP__ (-307)
 #define __UINTPTR_TYPE__ long unsigned int
 #define __DEC64_SUBNORMAL_MIN__ 0.000000000000001E-383DD
