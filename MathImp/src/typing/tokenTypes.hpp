@@ -94,11 +94,56 @@ API_MI_ struct ValueToken final : BaseToken {
     API_MI_ bool match(const std::string& input) const override {
         return std::isdigit(input[0]) || (input[0] == '.' && input.size() > 1);
     }
-    [[nodiscard]]
-    API_MI_ TokenType getType() const override {
+    [[nodiscard]] API_MI_ TokenType getType() const override {
         return TokenType::VALUE;
     }
 };
+API_MI_ struct VecToken final : BaseToken {
+    [[nodiscard]]
+    API_MI_ bool match(const std::string& token) const override {
+        return token.front() == '[' && token.back() == ']' && token.find(',') != std::string::npos;
+    }
 
+    [[nodiscard]]
+    API_MI_ TokenType getType() const override {
+        return TokenType::VECTOR;
+    }
+};
+
+API_MI_ struct MatToken final : BaseToken {
+    [[nodiscard]]
+    API_MI_ bool match(const std::string& token) const override {
+        if (token.front() != '[' || token.back() != ']') {
+            return false;
+        }
+        int bracketCount = 0;
+        for (char ch : token) {
+            if (ch == '[') {
+                bracketCount++;
+            } else if (ch == ']') {
+                bracketCount--;
+            }
+            if (bracketCount < 0) {
+                return false;
+            }
+        }
+        return bracketCount == 0 && token.find("],[") != std::string::npos;
+    }
+
+    [[nodiscard]]
+    API_MI_ TokenType getType() const override {
+        return TokenType::MATRIX;
+    }
+};
+class BracketToken final : public BaseToken {
+public:
+    bool match(const std::string& token) const override {
+        return token == "[" || token == "]";
+    }
+
+    TokenType getType() const override {
+        return TokenType::VECTOR; // Можно изменить тип, если нужно
+    }
+};
 API_MI_END
 #endif //TOKENTYPES_HPP

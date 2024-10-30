@@ -2,7 +2,7 @@
 // Created by gavri on 27.10.2024.
 //
 #include <gtest/gtest.h>
-#include "../include/typing/string.h"
+#include "../src/typing/string.h"
 
 API_MI_BEGIN
 

@@ -227,6 +227,14 @@ API_MI_BEGIN
         throw std::runtime_error("Invalid type");
     }
 
+    API_MI_ Variable Variable::operator+(const int other) const {
+        return Variable(std::get<int>(value_) + other);
+    }
+
+    API_MI_ Variable Variable::operator+(const float other) const {
+        return Variable(std::get<float>(value_) + other);
+    }
+
     API_MI_ Variable Variable::operator-(const Variable& other) const {
         switch (type_) {
             case Type::INT:
@@ -237,6 +245,14 @@ API_MI_BEGIN
                 throw std::runtime_error("Invalid operation");
         }
         throw std::runtime_error("Invalid type");
+    }
+
+    API_MI_ Variable Variable::operator-(const int other) const {
+        return Variable(std::get<int>(value_) - other);
+    }
+
+    API_MI_ Variable Variable::operator-(const float other) const {
+        return Variable(std::get<float>(value_) - other);
     }
 
     API_MI_ Variable Variable::operator*(const Variable& other) const {
@@ -251,6 +267,14 @@ API_MI_BEGIN
         throw std::runtime_error("Invalid type");
     }
 
+    API_MI_ Variable Variable::operator*(const int other) const {
+        return Variable(std::get<int>(value_) * other);
+    }
+
+    API_MI_ Variable Variable::operator*(const float other) const {
+        return Variable(std::get<float>(value_) * other);
+    }
+
     API_MI_ Variable Variable::operator/(const Variable& other) const {
         switch (type_) {
             case Type::INT:
@@ -261,6 +285,14 @@ API_MI_BEGIN
                 throw std::runtime_error("Invalid operation");
         }
         throw std::runtime_error("Invalid type");
+    }
+
+    API_MI_ Variable Variable::operator/(const int other) const {
+        return Variable(std::get<int>(value_) / other);
+    }
+
+    API_MI_ Variable Variable::operator/(const float other) const {
+        return Variable(std::get<float>(value_) / other);
     }
 
     API_MI_ Variable& Variable::operator+=(const Variable& other) {
@@ -283,6 +315,45 @@ API_MI_BEGIN
         return *this;
     }
 
+    API_MI_ Variable& Variable::operator+=(const int other) {
+        *this = *this + other;
+        return *this;
+    }
+
+    API_MI_ Variable& Variable::operator-=(const int other) {
+        *this = *this - other;
+        return *this;
+    }
+
+    API_MI_ Variable& Variable::operator*=(const int other) {
+        *this = *this * other;
+        return *this;
+    }
+
+    API_MI_ Variable& Variable::operator/=(const int other) {
+        *this = *this / other;
+        return *this;
+    }
+
+    API_MI_ Variable& Variable::operator+=(const float other) {
+        *this = *this + other;
+        return *this;
+    }
+
+    API_MI_ Variable& Variable::operator-=(const float other) {
+        *this = *this - other;
+        return *this;
+    }
+
+    API_MI_ Variable& Variable::operator*=(const float other) {
+        *this = *this * other;
+        return *this;
+    }
+
+    API_MI_ Variable& Variable::operator/=(const float other) {
+        *this = *this / other;
+        return *this;
+    }
 
     API_MI_ Variable& Variable::operator++() {
         switch (type_) {
@@ -324,5 +395,60 @@ API_MI_BEGIN
         return copy;
     }
 
+API_MI_ std::ostream& operator<<(std::ostream& out, const int rhs) {
+    out << std::to_string(rhs);
+    return out;
+}
 
+API_MI_ std::istream& operator>>(std::istream& in, int& rhs) {
+    in >> rhs;
+    return in;
+}
+API_MI_ std::istream& operator>>(std::istream& in, float& rhs) {
+    in >> rhs;
+    return in;
+}
+
+std::ostream& operator<<(std::ostream& out, const Variable& variable) {
+    switch (variable.type()) {
+        case Variable::Type::INT:
+            out << variable.asInt(); // Явное приведение
+        break;
+        case Variable::Type::FLOAT:
+            out << variable.asFloat();
+        break;
+        case Variable::Type::STRING:
+            out << std::get<std::string>(variable.value_);
+        break;
+        default:
+            throw std::runtime_error("Invalid type");
+    }
+    return out;
+}
+
+std::istream& operator>>(std::istream& in, Variable& variable) {
+    switch (variable.type()) {
+        case Variable::Type::INT: {
+            int value;
+            in >> value;
+            variable = Variable(value);
+            break;
+        }
+        case Variable::Type::FLOAT: {
+            float value;
+            in >> value;
+            variable = Variable(value);
+            break;
+        }
+        case Variable::Type::STRING: {
+            std::string value;
+            in >> value;
+            variable = Variable(value);
+            break;
+        }
+        default:
+            throw std::runtime_error("Invalid type");
+    }
+    return in;
+}
 API_MI_END

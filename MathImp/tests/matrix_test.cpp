@@ -1,6 +1,6 @@
-#include "../include/typing/matrix.h"
-#include "../include/typing/vector.h"
-#include "../include/typing/number.h"
+#include "../src/typing/vector.h"
+#include "../src/typing/number.h"
+#include "../src/typing/matrix.h"
 #include <gtest/gtest.h>
 
 API_MI_BEGIN

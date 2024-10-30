@@ -2,7 +2,7 @@
 // Created by massonskyi on 28.10.24.
 //
 #include <gtest/gtest.h>
-#include "../include/base/history.h"
+#include "../src/base/history.h"
 
 API_MI_BEGIN
 

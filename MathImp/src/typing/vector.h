@@ -6,7 +6,7 @@
 #define VECTOR_HPP
 
 #include <vector>
-
+#include "number.h"
 #include "abstractObject.hpp"
 API_MI_BEGIN
 

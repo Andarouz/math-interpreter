@@ -1,4 +1,4 @@
-#include "../include/typing/rational.h"
+#include "../src/typing/rational.h"
 #include <gtest/gtest.h>
 #include <stdexcept>
 

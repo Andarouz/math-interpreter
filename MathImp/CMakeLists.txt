@@ -1,45 +1,54 @@
-cmake_minimum_required(VERSION 3.29)
+cmake_minimum_required(VERSION 3.28.3)
 project(MathImp)
 
-set(CMAKE_CXX_STANDARD 20)
+# Устанавливаем стандарт C++23
+set(CMAKE_CXX_STANDARD 23)
 
-# Add the library target
+# Add fmt library
+include(FetchContent)
+FetchContent_Declare(
+        fmt
+        GIT_REPOSITORY https://github.com/fmtlib/fmt.git
+        GIT_TAG 8.0.1
+)
+FetchContent_MakeAvailable(fmt)
 add_library(mathlib STATIC
-        include/typing/number.cpp
-        include/typing/number.h
-        include/core.hpp
-        include/typing/abstractObject.hpp
-        include/typing/vector.cpp
-        include/typing/vector.h
+        src/typing/number.cpp
+        src/typing/number.h
+        src/core.hpp
+        src/typing/abstractObject.hpp
+        src/typing/vector.cpp
+        src/typing/vector.h
         tests/vector_test.cpp
-        include/typing/variable.cpp
-        include/typing/variable.h
-        include/typing/matrix.cpp
-        include/typing/matrix.h
+        src/typing/variable.cpp
+        src/typing/variable.h
+        src/typing/matrix.cpp
+        src/typing/matrix.h
         tests/matrix_test.cpp
-        include/typing/rational.cpp
-        include/typing/rational.h
+        src/typing/rational.cpp
+        src/typing/rational.h
         tests/rational_test.cpp
-        include/base/interpreter.h
-        include/base/lexer.h
-        include/base/lexer.cpp
-        include/base/errorHandler.hpp
-        include/base/history.h
-        include/base/history.cpp
-        include/typing/string.cpp
-        include/typing/string.h
+        src/base/interpreter.h
+        src/base/lexer.h
+        src/base/lexer.cpp
+        src/base/errorHandler.hpp
+        src/base/history.h
+        src/base/history.cpp
+        src/typing/string.cpp
+        src/typing/string.h
         tests/string_test.cpp
         tests/lexer_test.cpp
         tests/history_test.cpp
-        include/typing/tokenTypes.hpp
-        include/base/interpreter.cpp
+        src/typing/tokenTypes.hpp
+        src/base/interpreter.cpp
+        src/base/outputHandler.hpp
 )
 
 # Add the executable target
 add_executable(MathImp main.cpp)
 
 # Link the library to the executable
-target_link_libraries(MathImp PRIVATE mathlib)
+target_link_libraries(MathImp PRIVATE mathlib fmt::fmt)
 
 # Add Google Test
 include(FetchContent)
@@ -58,10 +67,10 @@ enable_testing()
 
 # Add the test executable for Vector tests
 add_executable(VectorTests tests/vector_test.cpp
-        include/typing/number.cpp
-        include/typing/number.h
-        include/typing/vector.cpp
-        include/typing/vector.h)
+        src/typing/number.cpp
+        src/typing/number.h
+        src/typing/vector.cpp
+        src/typing/vector.h)
 
 # Link Google Test and the library to the Vector test executable
 target_link_libraries(VectorTests PRIVATE gtest gtest_main mathlib)
@@ -71,12 +80,12 @@ add_test(NAME VectorTests COMMAND VectorTests)
 
 # Add the test executable for Matrix tests
 add_executable(MatrixTests tests/matrix_test.cpp
-        include/typing/number.cpp
-        include/typing/number.h
-        include/typing/vector.cpp
-        include/typing/vector.h
-        include/typing/matrix.cpp
-        include/typing/matrix.h)
+        src/typing/number.cpp
+        src/typing/number.h
+        src/typing/vector.cpp
+        src/typing/vector.h
+        src/typing/matrix.cpp
+        src/typing/matrix.h)
 
 # Link Google Test and the library to the Matrix test executable
 target_link_libraries(MatrixTests PRIVATE gtest gtest_main mathlib)
@@ -86,10 +95,10 @@ add_test(NAME MatrixTests COMMAND MatrixTests)
 
 # Add the test executable for Rational tests
 add_executable(RationalTests tests/rational_test.cpp
-        include/typing/number.cpp
-        include/typing/number.h
-        include/typing/rational.cpp
-        include/typing/rational.h)
+        src/typing/number.cpp
+        src/typing/number.h
+        src/typing/rational.cpp
+        src/typing/rational.h)
 
 # Link Google Test and the library to the Rational test executable
 target_link_libraries(RationalTests PRIVATE gtest gtest_main mathlib)
@@ -98,10 +107,10 @@ target_link_libraries(RationalTests PRIVATE gtest gtest_main mathlib)
 add_test(NAME RationalTests COMMAND RationalTests)
 
 add_executable(StringTests tests/string_test.cpp
-        include/typing/number.cpp
-        include/typing/number.h
-        include/typing/string.cpp
-        include/typing/string.h)
+        src/typing/number.cpp
+        src/typing/number.h
+        src/typing/string.cpp
+        src/typing/string.h)
 
 # Link Google Test and the library to the String test executable
 target_link_libraries(StringTests PRIVATE gtest gtest_main mathlib)
@@ -111,9 +120,9 @@ add_test(NAME StringTests COMMAND StringTests)
 
 
 add_executable(LexerTests tests/lexer_test.cpp
-        include/typing/number.cpp
-        include/typing/number.h
-        include/base/lexer.h)
+        src/typing/number.cpp
+        src/typing/number.h
+        src/base/lexer.h)
 
 # Link Google Test and the library to the Lexer test executable
 target_link_libraries(LexerTests PRIVATE gtest gtest_main mathlib)
@@ -122,8 +131,8 @@ target_link_libraries(LexerTests PRIVATE gtest gtest_main mathlib)
 add_test(NAME LexerTests COMMAND LexerTests)
 
 add_executable(HistoryTests tests/history_test.cpp
-        include/base/history.h
-        include/base/history.cpp
+        src/base/history.h
+        src/base/history.cpp
 )
 
 # Link Google Test and the library to the History test executable

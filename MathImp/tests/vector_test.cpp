@@ -1,5 +1,5 @@
-#include "../include/typing/number.h"
-#include "../include/typing/vector.h"
+#include "../src/typing/vector.h"
+#include "../src/typing/number.h"
 #include <gtest/gtest.h>
 
 API_MI_BEGIN

@@ -5,6 +5,7 @@
 #ifndef VARIABLE_HPP
 #define VARIABLE_HPP
 
+#include <stdexcept>
 #include <variant>
 
 #include "abstractObject.hpp"
@@ -50,10 +51,30 @@ public API_METHODS:
     API_MI_ Variable operator*(const Variable& other) const;
     API_MI_ Variable operator/(const Variable& other) const;
 
+    API_MI_ Variable operator+(int other) const;
+    API_MI_ Variable operator+(float other) const;
+
+    API_MI_ Variable operator-(int other) const;
+    API_MI_ Variable operator-(float other) const;
+
+    API_MI_ Variable operator*(int other) const;
+    API_MI_ Variable operator*(float other) const;
+
+    API_MI_ Variable operator/(int other) const;
+    API_MI_ Variable operator/(float other) const;
+
     API_MI_ Variable& operator+=(const Variable& other);
     API_MI_ Variable& operator-=(const Variable& other);
     API_MI_ Variable& operator*=(const Variable& other);
     API_MI_ Variable& operator/=(const Variable& other);
+    API_MI_ Variable& operator+=(int other);
+    API_MI_ Variable& operator-=(int other);
+    API_MI_ Variable& operator*=(int other);
+    API_MI_ Variable& operator/=(int other);
+    API_MI_ Variable& operator+=(float other);
+    API_MI_ Variable& operator-=(float other);
+    API_MI_ Variable& operator*=(float other);
+    API_MI_ Variable& operator/=(float other);
     API_MI_ Variable& operator++();    // Prefix increment
     API_MI_ Variable operator++(int);  // Postfix increment
     API_MI_ Variable& operator--();    // Prefix decrement
@@ -102,6 +123,8 @@ public API_METHODS:
     [[nodiscard]]
     API_MI_ std::string getString() const;
 
+    API_MI_ friend std::ostream& operator<<(std::ostream& out, const Variable& variable);
+    API_MI_ friend std::istream& operator>>(std::istream& in, Variable& variable);
 private API_VARIABLES:
     std::variant<int, float, std::string> value_;
     Type type_;

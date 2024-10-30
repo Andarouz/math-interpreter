@@ -8,7 +8,7 @@
 
 #include "abstractObject.hpp"
 #include "vector.h"
-
+#include "number.h"
 API_MI_BEGIN
 
 class Matrix final : public AbstractObject {
