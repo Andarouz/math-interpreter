@@ -7,10 +7,10 @@
 
 
 #include "abstractObject.hpp"
-#include "vector.h"
+#include <vector>
 #include "number.h"
 API_MI_BEGIN
-
+class Vector;
 class Matrix final : public AbstractObject {
 public API_METHODS:
     Matrix();
@@ -81,7 +81,7 @@ public API_METHODS:
 
     [[nodiscard]]
     API_MI_ std::vector<Vector>::const_iterator cend() const;
-
+    API_MI_ friend std::ostream& operator<<(std::ostream& os, const Matrix& matrix);
 private:
     std::vector<Vector> value_; // Change to store vectors directly
 };

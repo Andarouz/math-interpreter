@@ -32,13 +32,6 @@ CONFIG += qml_debug  # Включает QML-отладчик для более �
 # Папка для вывода скомпилированных файлов
 DESTDIR = bin
 
-# Путь к ресурсам (например, изображениям)
-RESOURCES += \
-    resources/images.qrc
-
-# Установка зависимостей при необходимости
-LIBS += -L/path/to/libs -lname_of_lib
-
 # Включение файловых путей для Intellisense (если используется в Qt Creator)
 INCLUDEPATH += src \
                src/viewmodels \
@@ -47,15 +40,4 @@ INCLUDEPATH += src \
 # Оптимизация настроек компилятора и линкера
 QMAKE_CXXFLAGS_RELEASE += -O2 -Wall -Wextra
 QMAKE_LFLAGS_RELEASE += -s
-
-# Установка параметров для кросс-платформенности
-win32: {
-    RC_FILE = resources/windows/MyProject.rc
-}
-macx {
-    ICON = resources/icons/macicon.icns
-}
-linux-g++ {
-    QMAKE_LFLAGS += -Wl,-rpath,'$$ORIGIN'  # Установка rpath для библиотек
-}
 

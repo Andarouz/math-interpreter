@@ -5,12 +5,14 @@
 #ifndef VECTOR_HPP
 #define VECTOR_HPP
 
+#include <ostream>
 #include <vector>
-#include "number.h"
 #include "abstractObject.hpp"
+#include "number.h"
 API_MI_BEGIN
 
 class Number;
+
 class Vector final : public AbstractObject {
 public API_METHODS:
     Vector();
@@ -42,10 +44,30 @@ public API_METHODS:
     API_MI_ Vector operator*(const Vector& other) const;
     API_MI_ Vector operator/(const Vector& other) const;
 
+    API_MI_ Vector operator+(int other) const;
+    API_MI_ Vector operator-(int other) const;
+    API_MI_ Vector operator*(int other) const;
+    API_MI_ Vector operator/(int other) const;
+
+    API_MI_ Vector operator+(float other) const;
+    API_MI_ Vector operator-(float other) const;
+    API_MI_ Vector operator*(float other) const;
+    API_MI_ Vector operator/(float other) const;
+
     API_MI_ Vector& operator+=(const Vector& other);
     API_MI_ Vector& operator-=(const Vector& other);
     API_MI_ Vector& operator*=(const Vector& other);
     API_MI_ Vector& operator/=(const Vector& other);
+
+    API_MI_ Vector& operator+=(int other);
+    API_MI_ Vector& operator-=(int other);
+    API_MI_ Vector& operator*=(int other);
+    API_MI_ Vector& operator/=(int other);
+
+    API_MI_ Vector& operator+=(float other);
+    API_MI_ Vector& operator-=(float other);
+    API_MI_ Vector& operator*=(float other);
+    API_MI_ Vector& operator/=(float other);
 
     API_MI_ Vector& operator++();    // Prefix increment
     API_MI_ Vector operator++(int);  // Postfix increment
@@ -76,7 +98,17 @@ public API_METHODS:
     [[nodiscard]]
     API_MI_ std::vector<Number>::const_iterator cend() const;
 
-
+    API_MI_ friend std::ostream& operator<<(std::ostream& os, const Vector& vector) {
+        os << "[";
+        std::for_each(vector.cbegin(), vector.cend(), [&os, vector](const Number &number) {
+            if(number == vector.cend()[-1])
+                os << number;
+            else
+                os << number << ", ";
+        });
+        os << "]";
+        return os;
+    }
 private API_VARIABLES:
     std::vector<Number> value_;
 };

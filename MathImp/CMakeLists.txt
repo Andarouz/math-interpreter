@@ -12,6 +12,7 @@ FetchContent_Declare(
         GIT_TAG 8.0.1
 )
 FetchContent_MakeAvailable(fmt)
+
 add_library(mathlib STATIC
         src/typing/number.cpp
         src/typing/number.h
@@ -42,6 +43,7 @@ add_library(mathlib STATIC
         src/typing/tokenTypes.hpp
         src/base/interpreter.cpp
         src/base/outputHandler.hpp
+
 )
 
 # Add the executable target
@@ -133,6 +135,7 @@ add_test(NAME LexerTests COMMAND LexerTests)
 add_executable(HistoryTests tests/history_test.cpp
         src/base/history.h
         src/base/history.cpp
+
 )
 
 # Link Google Test and the library to the History test executable

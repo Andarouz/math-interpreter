@@ -10,7 +10,7 @@ int main(int argc, char *argv[]) {
     TerminalViewModel terminalViewModel;
 
     engine.rootContext()->setContextProperty("terminalViewModel", &terminalViewModel);
-    engine.load(QUrl(QStringLiteral("qrc:/TerminalView.qml")));
+    engine.load(QUrl(QStringLiteral("../src/views/TerminalView.qml")));
 
     return QGuiApplication::exec();
 }

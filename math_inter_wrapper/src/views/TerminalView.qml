@@ -1,6 +1,5 @@
-import QtQuick
-import QtQuick.Controls 2.15
-import UntitledProject3
+import QtQuick 6.0
+import QtQuick.Controls 6.0
 
 Window {
     width: mainScreen.width

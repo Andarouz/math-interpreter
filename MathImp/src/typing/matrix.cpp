@@ -5,7 +5,7 @@
 #include <iomanip>
 #include <stdexcept>
 #include "number.h"
-
+#include "vector.h"
 API_MI_NAMESPACE API_MI_ Matrix::Matrix()
     : value_() {}
 
@@ -254,5 +254,15 @@ API_MI_ std::vector<Vector>::const_iterator Matrix::cbegin() const {
 API_MI_ std::vector<Vector>::const_iterator Matrix::cend() const {
     return value_.cend();
 }
-
+API_MI_ std::ostream& operator<<(std::ostream& os, const Matrix& matrix) {
+    os << "[";
+    for (auto it = matrix.cbegin(); it != matrix.cend(); ++it) {
+        os << *it;
+        if (it != matrix.cend() - 1) {
+            os << ", ";
+        }
+    }
+    os << "]";
+    return os;
+}
 API_MI_END

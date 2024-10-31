@@ -49,19 +49,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 26,
+				"line" : 30,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 35,
+				"line" : 39,
 				"parent" : 0
 			},
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 10,
+				"line" : 13,
 				"parent" : 0
 			},
 			{
@@ -267,7 +267,7 @@
 			{
 				"command" : 9,
 				"file" : 0,
-				"line" : 44,
+				"line" : 59,
 				"parent" : 0
 			}
 		]
@@ -317,6 +317,10 @@
 				},
 				{
 					"backtrace" : 2,
+					"define" : "QT_QUICKCONTROLS2_LIB"
+				},
+				{
+					"backtrace" : 2,
 					"define" : "QT_QUICK_LIB"
 				},
 				{
@@ -362,6 +366,11 @@
 				{
 					"backtrace" : 2,
 					"isSystem" : true,
+					"path" : "/usr/include/x86_64-linux-gnu/qt6/QtQuick"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
 					"path" : "/usr/include/x86_64-linux-gnu/qt6/QtQml"
 				},
 				{
@@ -377,17 +386,17 @@
 				{
 					"backtrace" : 2,
 					"isSystem" : true,
-					"path" : "/usr/include/x86_64-linux-gnu/qt6/QtQuick"
-				},
-				{
-					"backtrace" : 2,
-					"isSystem" : true,
 					"path" : "/usr/include/x86_64-linux-gnu/qt6/QtQmlModels"
 				},
 				{
 					"backtrace" : 2,
 					"isSystem" : true,
 					"path" : "/usr/include/x86_64-linux-gnu/qt6/QtOpenGL"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "/usr/include/x86_64-linux-gnu/qt6/QtQuickControls2"
 				},
 				{
 					"backtrace" : 2,
@@ -439,12 +448,17 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/usr/lib/x86_64-linux-gnu/libQt6Quick.so.6.4.2",
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libQt6QuickControls2.so.6.4.2",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
 				"fragment" : "/usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libQt6Quick.so.6.4.2",
 				"role" : "libraries"
 			},
 			{

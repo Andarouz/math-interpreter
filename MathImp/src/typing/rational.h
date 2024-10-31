@@ -3,11 +3,12 @@
 #define RATIONAL_HPP
 
 #include "abstractObject.hpp"
+#include <ostream>
 API_MI_BEGIN
 
 class Rational final : public AbstractObject {
-    public API_METHODS:
-        API_MI_ Rational();
+public API_METHODS:
+    API_MI_ Rational();
     API_MI_ Rational(int numerator, int denominator);
 
     API_MI_ Rational(const Rational& other);
@@ -54,11 +55,15 @@ class Rational final : public AbstractObject {
     [[nodiscard]]
     API_MI_ int getDenominator() const;
 
-    private API_VARIABLES:
-        API_MI_ int numerator_;
+    API_MI_ friend std::ostream& operator<<(std::ostream& os, const Rational& rational) {
+        os << rational.numerator_ << "/" << rational.denominator_;
+        return os;
+    }
+private API_VARIABLES:
+    API_MI_ int numerator_;
     API_MI_ int denominator_;
 
-    API_MI_ void reduce();
+API_MI_ void reduce();
 };
 
 API_MI_END

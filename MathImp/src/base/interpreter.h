@@ -15,14 +15,14 @@
 
 API_MI_BEGIN
 class Interpreter final {
-public API_METHODS:
-    API_MI_ enum class MODE {
+    public API_METHODS:
+        enum class MODE {
         FILE_READ,
         CONSOLE,
         GUI
     };
 
-    API_MI_ enum class VariableType {
+    enum class VariableType {
         Vector,
         Matrix,
         Number,
@@ -30,40 +30,32 @@ public API_METHODS:
         Unknown
     };
 
-    API_MI_ Interpreter();
-    API_MI_ ~Interpreter() = default;
+    Interpreter();
+    ~Interpreter() = default;
 
-    API_MI_ void start(MODE);
+    void start(MODE mode);
 
 protected:
-    API_MI_ void run();
+    void run();
+    [[nodiscard]] bool read();
+    [[nodiscard]] bool write();
 
-    [[nodiscard]]
-    API_MI_ bool read();
-
-    [[nodiscard]]
-    API_MI_ bool write();
-private
-    API_METHODS : static VariableType determineVariableType(const std::string& type);
-    void addVariableToMap(const std::string& name, VariableType type,
-                          const std::string& value);
-    void search_variable(const std::string& keyName);
+private API_METHODS:
+    static VariableType determineVariableType(const std::string& type);
+    void addVariableToMap(const std::string& name, const std::string& value);
+    void searchVariable(const std::string& keyName);
+    static Matrix parseStringToMatrix(const std::string& input);
+    static Vector parseStringToVector(const std::string &input);
+    static std::variant<int, float, Vector, Matrix> stringToVariant(const std::string& input);
+    bool checkVariableInMap(const std::string& name) const;
+    std::variant<int, float, Vector, Matrix> evaluateExpression(const std::vector<Lexer::Token>& tokens);
+    [[nodiscard]] static bool isAssignment(const std::vector<Lexer::Token>& tokens);
+    void processAssignment(const std::vector<Lexer::Token>& tokens);
 
 private API_VARIABLES:
-
-    API_MI_ Lexer lexer_;
-    API_MI_ History history_;
-
-    // // API_MI_ std::map<std::string, Variable> variables_;
-    // API_MI_ std::map<std::string, Vector> vectors_table_;
-    // API_MI_ std::map<std::string, Matrix> matrix_table_;
-    // API_MI_ std::map<std::string, Number> numbers_table_;
-    // API_MI_ std::map<std::string, Rational> rational_table_;
-    API_MI_ std::map<std::string, std::string> vectors_table_;
-    API_MI_ std::map<std::string, std::string> matrix_table_;
-    API_MI_ std::map<std::string, std::string> numbers_table_;
-    API_MI_ std::map<std::string, std::string> rational_table_;
-
+    Lexer lexer_;
+    History history_;
+    std::map<std::string, std::variant<int, float, Vector, Matrix>> variables_;
 };
 
 API_MI_END

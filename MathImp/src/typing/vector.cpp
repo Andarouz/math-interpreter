@@ -106,6 +106,24 @@ API_MI_BEGIN
         return Vector(result);
     }
 
+    API_MI_ Vector Vector::operator+(const int other) const {
+        std::vector<Number> result;
+        result.reserve(value_.size());
+        for (const auto & i : value_) {
+            result.push_back(i + other);
+        }
+        return Vector(result);
+    }
+
+    API_MI_ Vector Vector::operator+(const float other) const {
+        std::vector<Number> result;
+        result.reserve(value_.size());
+        for (const auto & i : value_) {
+            result.push_back(i + other);
+        }
+        return Vector(result);
+    }
+
     API_MI_ Vector Vector::operator-(const Vector& other) const {
         if (value_.size() != other.value_.size()) {
             throw std::runtime_error("Vectors must be of the same size for subtraction");
@@ -114,6 +132,24 @@ API_MI_BEGIN
         result.reserve(value_.size());
         for (size_t i = 0; i < value_.size(); ++i) {
             result.push_back(value_[i] - other.value_[i]);
+        }
+        return Vector(result);
+    }
+
+    API_MI_ Vector Vector::operator-(const int other) const {
+        std::vector<Number> result;
+        result.reserve(value_.size());
+        for (const auto & i : value_) {
+            result.push_back(i - other);
+        }
+        return Vector(result);
+    }
+
+    API_MI_ Vector Vector::operator-(const float other) const {
+        std::vector<Number> result;
+        result.reserve(value_.size());
+        for (const auto & i : value_) {
+            result.push_back(i - other);
         }
         return Vector(result);
     }
@@ -130,6 +166,24 @@ API_MI_BEGIN
         return Vector(result);
     }
 
+    API_MI_ Vector Vector::operator*(const int other) const {
+        std::vector<Number> result;
+        result.reserve(value_.size());
+        for (const auto & i : value_) {
+            result.push_back(i * other);
+        }
+        return Vector(result);
+    }
+
+    API_MI_ Vector Vector::operator*(const float other) const {
+        std::vector<Number> result;
+        result.reserve(value_.size());
+        for (const auto & i : value_) {
+            result.push_back(i * other);
+        }
+        return Vector(result);
+    }
+
     API_MI_ Vector Vector::operator/(const Vector& other) const {
         if (value_.size() != other.value_.size()) {
             throw std::runtime_error("Vectors must be of the same size for division");
@@ -138,6 +192,24 @@ API_MI_BEGIN
         result.reserve(value_.size());
         for (size_t i = 0; i < value_.size(); ++i) {
             result.push_back(value_[i] / other.value_[i]);
+        }
+        return Vector(result);
+    }
+
+    API_MI_ Vector Vector::operator/(const int other) const {
+        std::vector<Number> result;
+        result.reserve(value_.size());
+        for (const auto & i : value_) {
+            result.push_back(i / other);
+        }
+        return Vector(result);
+    }
+
+    API_MI_ Vector Vector::operator/(const float other) const {
+        std::vector<Number> result;
+        result.reserve(value_.size());
+        for (const auto & i : value_) {
+            result.push_back(i / other);
         }
         return Vector(result);
     }

@@ -451,4 +451,19 @@ std::istream& operator>>(std::istream& in, Variable& variable) {
     }
     return in;
 }
+
+
+API_MI_ bool Variable::isZero() const {
+    switch (type()) {
+        case Variable::Type::INT: {
+            return asInt() == 0;
+        }
+        case Variable::Type::FLOAT: {
+            return asFloat() == 0.0f;
+        }
+        default:
+            return false;
+    }
+};
+
 API_MI_END

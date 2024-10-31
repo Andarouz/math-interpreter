@@ -67,8 +67,8 @@ API_MI_ struct NameVariableToken final : BaseToken {
     }
 };
 
-// Токены для операторов (например, =, ;, , и т.д.)
-struct OperatorToken final : BaseToken {
+// Новый `OperatorToken` для поддержания математических операций
+API_MI_ struct OperatorToken final : BaseToken {
     API_MI_ OperatorToken() {
         std::istringstream iss(RESERVED_OPERATORS);
         std::string word;
@@ -85,7 +85,7 @@ struct OperatorToken final : BaseToken {
         return TokenType::OPERATOR;
     }
 private:
-    std::set<std::string> reservedOperators_ ;
+    std::set<std::string> reservedOperators_;
 };
 
 // Токены для числовых значений

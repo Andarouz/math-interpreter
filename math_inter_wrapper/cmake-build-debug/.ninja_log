@@ -1,10 +1,17 @@
 # ninja log v6
-1	165	1730299653226494313	math_inter_wrapper_autogen/timestamp	fce8b14d2ce967bd
-1	165	1730299653226494313	math_inter_wrapper_autogen/mocs_compilation.cpp	fce8b14d2ce967bd
-1	165	1730299653226494313	/home/massonskyi/repo/math-interpretator-main/math_inter_wrapper/cmake-build-debug/math_inter_wrapper_autogen/timestamp	fce8b14d2ce967bd
-1	165	1730299653226494313	/home/massonskyi/repo/math-interpretator-main/math_inter_wrapper/cmake-build-debug/math_inter_wrapper_autogen/mocs_compilation.cpp	fce8b14d2ce967bd
-165	1218	1730299653229494475	CMakeFiles/math_inter_wrapper.dir/src/viewmodels/TerminalViewModel.cpp.o	f1e5f4f20ce80396
-165	1220	1730299653229494475	CMakeFiles/math_inter_wrapper.dir/math_inter_wrapper_autogen/mocs_compilation.cpp.o	797108f3ea7cd0d5
-165	1254	1730299653229494475	CMakeFiles/math_inter_wrapper.dir/src/models/TerminalModel.cpp.o	3fdce7f243f17752
-165	1366	1730299653229494475	CMakeFiles/math_inter_wrapper.dir/src/main.cpp.o	cf284c71718ef677
-1366	1607	1730299654430559409	math_inter_wrapper	da1876c70c3119d2
+1	167	1730300381201842722	math_inter_wrapper_autogen/timestamp	fce8b14d2ce967bd
+1	167	1730300381201842722	math_inter_wrapper_autogen/mocs_compilation.cpp	fce8b14d2ce967bd
+1	167	1730300381201842722	/home/massonskyi/repo/math-interpretator-main/math_inter_wrapper/cmake-build-debug/math_inter_wrapper_autogen/timestamp	fce8b14d2ce967bd
+1	167	1730300381201842722	/home/massonskyi/repo/math-interpretator-main/math_inter_wrapper/cmake-build-debug/math_inter_wrapper_autogen/mocs_compilation.cpp	fce8b14d2ce967bd
+167	1239	1730300381204842864	CMakeFiles/math_inter_wrapper.dir/math_inter_wrapper_autogen/mocs_compilation.cpp.o	a47d79da8b144ce1
+167	1242	1730300381204842864	CMakeFiles/math_inter_wrapper.dir/src/models/TerminalModel.cpp.o	dfd28d0fbc904272
+167	1153	1730300381204842864	CMakeFiles/math_inter_wrapper.dir/src/viewmodels/TerminalViewModel.cpp.o	223f645569c08af3
+1	158	1730300429762136525	math_inter_wrapper_autogen/timestamp	fce8b14d2ce967bd
+1	158	1730300429762136525	math_inter_wrapper_autogen/mocs_compilation.cpp	fce8b14d2ce967bd
+1	158	1730300429762136525	/home/massonskyi/repo/math-interpretator-main/math_inter_wrapper/cmake-build-debug/math_inter_wrapper_autogen/timestamp	fce8b14d2ce967bd
+1	158	1730300429762136525	/home/massonskyi/repo/math-interpretator-main/math_inter_wrapper/cmake-build-debug/math_inter_wrapper_autogen/mocs_compilation.cpp	fce8b14d2ce967bd
+158	1039	1730300429765136666	CMakeFiles/math_inter_wrapper.dir/src/viewmodels/TerminalViewModel.cpp.o	bd1451081e929bb
+158	1073	1730300429765136666	CMakeFiles/math_inter_wrapper.dir/math_inter_wrapper_autogen/mocs_compilation.cpp.o	5a0352753e0e4359
+158	1226	1730300429765136666	CMakeFiles/math_inter_wrapper.dir/src/models/TerminalModel.cpp.o	cc3c7c8e2d72ce34
+158	1258	1730300429765136666	CMakeFiles/math_inter_wrapper.dir/src/main.cpp.o	c5083c9a870321fb
+1258	1483	1730300430865188522	math_inter_wrapper	95c83b8406635e60

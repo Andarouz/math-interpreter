@@ -123,6 +123,10 @@ public API_METHODS:
     [[nodiscard]]
     API_MI_ std::string getString() const;
 
+    [[nodiscard]]
+    API_MI_ bool isZero() const;
+
+
     API_MI_ friend std::ostream& operator<<(std::ostream& out, const Variable& variable);
     API_MI_ friend std::istream& operator>>(std::istream& in, Variable& variable);
 private API_VARIABLES:

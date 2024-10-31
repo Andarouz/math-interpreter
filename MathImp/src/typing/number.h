@@ -40,20 +40,52 @@ public API_METHODS:
 
     API_MI_ bool operator==(const Number& other) const;
     API_MI_ bool operator!=(const Number& other) const;
+
     API_MI_ Number operator+(const Number& other) const;
     API_MI_ Number operator-(const Number& other) const;
     API_MI_ Number operator*(const Number& other) const;
     API_MI_ Number operator/(const Number& other) const;
+
+    API_MI_ Number operator+(int other) const;
+    API_MI_ Number operator-(int other) const;
+    API_MI_ Number operator*(int other) const;
+    API_MI_ Number operator/(int other) const;
+
+    API_MI_ Number operator+(float other) const;
+    API_MI_ Number operator-(float other) const;
+    API_MI_ Number operator*(float other) const;
+    API_MI_ Number operator/(float other) const;
 
     API_MI_ Number& operator+=(const Number& other);
     API_MI_ Number& operator-=(const Number& other);
     API_MI_ Number& operator*=(const Number& other);
     API_MI_ Number& operator/=(const Number& other);
 
+    API_MI_ Number& operator+=(int other);
+    API_MI_ Number& operator-=(int other);
+    API_MI_ Number& operator*=(int other);
+    API_MI_ Number& operator/=(int other);
+
+    API_MI_ Number& operator+=(float other);
+    API_MI_ Number& operator-=(float other);
+    API_MI_ Number& operator*=(float other);
+    API_MI_ Number& operator/=(float other);
     API_MI_ Number& operator++();    // Prefix increment
     API_MI_ Number operator++(int);  // Postfix increment
     API_MI_ Number& operator--();    // Prefix decrement
     API_MI_ Number operator--(int);  // Postfix decrement
+
+    API_MI_ friend std::ostream& operator<<(std::ostream& os, const Number& number) {
+        os << number.value_;
+        return os;
+    }
+    // API_MI_ friend std::ifstream& operator>>(std::ifstream& is, Number& number) {
+    //     is >> number.value_;
+    //     return is;
+    // }
+
+    [[nodiscard]]
+    API_MI_ bool isZero() const;
 private API_VARIABLES:
     API_MI_ Variable value_;
 };

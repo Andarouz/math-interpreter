@@ -163,6 +163,12 @@ API_MI_ Number Number::operator+(const Number& other) const {
     throw std::runtime_error("Invalid type for addition");
 }
 
+API_MI_ Number Number::operator+(const int other) const {
+    return Number(value_.getInt() + other);
+}
+API_MI_ Number Number::operator+(const float other) const {
+    return Number(value_.getFloat() + other);
+}
 API_MI_ Number Number::operator-(const Number& other) const {
     if (value_.type() == Variable::Type::INT && other.value_.type() == Variable::Type::INT) {
         return Number(value_.getInt() - other.value_.getInt());
@@ -170,6 +176,14 @@ API_MI_ Number Number::operator-(const Number& other) const {
         return Number(value_.getFloat() - other.value_.getFloat());
     }
     throw std::runtime_error("Invalid type for subtraction");
+}
+
+API_MI_ Number Number::operator-(const int other) const {
+    return Number(value_.getInt() - other);
+}
+
+API_MI_ Number Number::operator-(const float other) const {
+    return Number(value_.getFloat() - other);
 }
 
 API_MI_ Number Number::operator*(const Number& other) const {
@@ -180,7 +194,12 @@ API_MI_ Number Number::operator*(const Number& other) const {
     }
     throw std::runtime_error("Invalid type for multiplication");
 }
-
+API_MI_ Number Number::operator*(const int other) const {
+    return Number(value_.getInt() * other);
+}
+API_MI_ Number Number::operator*(const float other) const {
+    return Number(value_.getFloat() * other);
+}
 API_MI_ Number Number::operator/(const Number& other) const {
     if (value_.type() == Variable::Type::INT && other.value_.type() == Variable::Type::INT) {
         if (other.value_.getInt() == 0) {
@@ -196,7 +215,24 @@ API_MI_ Number Number::operator/(const Number& other) const {
     throw std::runtime_error("Invalid type for division");
 }
 
+API_MI_ Number Number::operator/(const int other) const {
+    return Number(value_.getInt() / other);
+}
+
+API_MI_ Number Number::operator/(const float other) const {
+    return Number(value_.getFloat() * other);
+}
 API_MI_ Number& Number::operator+=(const Number& other) {
+    *this = *this + other;
+    return *this;
+}
+
+API_MI_ Number& Number::operator+=(const int other) {
+    *this = *this + other;
+    return *this;
+}
+
+API_MI_ Number& Number::operator+=(const float other) {
     *this = *this + other;
     return *this;
 }
@@ -206,8 +242,26 @@ API_MI_ Number& Number::operator-=(const Number& other) {
     return *this;
 }
 
+API_MI_ Number& Number::operator-=(const int other) {
+    *this = *this - other;
+    return *this;
+}
+
+API_MI_ Number& Number::operator-=(const float other) {
+    *this = *this - other;
+    return *this;
+}
 
 API_MI_ Number& Number::operator*=(const Number& other) {
+    *this = *this * other;
+    return *this;
+}
+API_MI_ Number& Number::operator*=(const int other) {
+    *this = *this * other;
+    return *this;
+}
+
+API_MI_ Number& Number::operator*=(const float other) {
     *this = *this * other;
     return *this;
 }
@@ -217,6 +271,15 @@ API_MI_ Number& Number::operator/=(const Number& other) {
     return *this;
 }
 
+API_MI_ Number& Number::operator/=(const int other) {
+    *this = *this / other;
+    return *this;
+}
+
+API_MI_ Number& Number::operator/=(const float other) {
+    *this = *this / other;
+    return *this;
+}
 API_MI_ Number& Number::operator++() {
     switch (value_.type()) {
         case Variable::Type::INT:
@@ -254,6 +317,10 @@ API_MI_ Number Number::operator--(int) {
     Number temp(*this);
     --(*this);
     return temp;
+}
+
+API_MI_ bool Number::isZero() const {
+    return value_.isZero();
 }
 
 API_MI_END
